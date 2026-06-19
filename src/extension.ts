@@ -9,9 +9,9 @@ function getOpenFiles() {
 async function openFileByIndex(index: number) {
   const tabs = getOpenFiles();
 
-  vscode.window.showInformationMessage(
-    `Index=${index}, Total Tabs=${tabs.length}`,
-  );
+  // vscode.window.showInformationMessage(
+  //   `Index=${index}, Total Tabs=${tabs.length}`,
+  // );
 
   const tab = tabs[index - 1];
 
@@ -30,19 +30,29 @@ async function openFileByIndex(index: number) {
 export function activate(context: vscode.ExtensionContext) {
   const output = vscode.window.createOutputChannel("Open Files");
 
-  vscode.window.showInformationMessage("🚀 File Explorer Loaded");
+  // vscode.window.showInformationMessage("🚀 File Explorer Loaded");
   output.appendLine("Extension Activated");
   output.show(true);
 
   provider = new OpenFilesProvider();
 
-  vscode.window.createTreeView("openFilesView", {
+  const treeView = vscode.window.createTreeView("openFilesView", {
     treeDataProvider: provider,
   });
 
-  vscode.window.tabGroups.onDidChangeTabGroups(() => {
-    provider.refresh();
-  });
+  context.subscriptions.push(treeView);
+
+  context.subscriptions.push(
+    vscode.window.tabGroups.onDidChangeTabs(() => {
+      provider.refresh();
+    }),
+  );
+
+  context.subscriptions.push(
+    vscode.window.tabGroups.onDidChangeTabGroups(() => {
+      provider.refresh();
+    }),
+  );
 
   for (let i = 1; i <= 9; i++) {
     const disposable = vscode.commands.registerCommand(

@@ -4,7 +4,7 @@
   "description": "",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.125.0"
+    "vscode": "^1.121.0"
   },
   "categories": [
     "Other"
@@ -78,47 +78,47 @@
       }
     ],
     "keybindings": [
-  {
-    "command": "file-explorer.openFile1",
-    "key": "ctrl+shift+1"
-  },
-  {
-    "command": "file-explorer.openFile2",
-    "key": "ctrl+shift+2"
-  },
-  {
-    "command": "file-explorer.openFile3",
-    "key": "ctrl+shift+3"
-  },
-  {
-    "command": "file-explorer.openFile4",
-    "key": "ctrl+shift+4"
-  },
-  {
-    "command": "file-explorer.openFile5",
-    "key": "ctrl+shift+5"
-  },
-  {
-    "command": "file-explorer.openFile6",
-    "key": "ctrl+shift+6"
-  },
-  {
-    "command": "file-explorer.openFile7",
-    "key": "ctrl+shift+7"
-  },
-  {
-    "command": "file-explorer.openFile8",
-    "key": "ctrl+shift+8"
-  },
-  {
-    "command": "file-explorer.openFile9",
-    "key": "ctrl+shift+9"
-  },
-  {
-    "command": "file-explorer.openByIndex",
-    "key": "ctrl+shift+o"
-  }
-]
+      {
+        "command": "file-explorer.openFile1",
+        "key": "ctrl+shift+1"
+      },
+      {
+        "command": "file-explorer.openFile2",
+        "key": "ctrl+shift+2"
+      },
+      {
+        "command": "file-explorer.openFile3",
+        "key": "ctrl+shift+3"
+      },
+      {
+        "command": "file-explorer.openFile4",
+        "key": "ctrl+shift+4"
+      },
+      {
+        "command": "file-explorer.openFile5",
+        "key": "ctrl+shift+5"
+      },
+      {
+        "command": "file-explorer.openFile6",
+        "key": "ctrl+shift+6"
+      },
+      {
+        "command": "file-explorer.openFile7",
+        "key": "ctrl+shift+7"
+      },
+      {
+        "command": "file-explorer.openFile8",
+        "key": "ctrl+shift+8"
+      },
+      {
+        "command": "file-explorer.openFile9",
+        "key": "ctrl+shift+9"
+      },
+      {
+        "command": "file-explorer.openByIndex",
+        "key": "ctrl+shift+o"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
