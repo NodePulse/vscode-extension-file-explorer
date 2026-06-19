@@ -1,0 +1,147 @@
+{
+  "name": "file-explorer",
+  "displayName": "file explorer",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "openFiles",
+          "title": "Open Files",
+          "icon": "resources/open-files.svg"
+        }
+      ]
+    },
+    "views": {
+      "openFiles": [
+        {
+          "id": "openFilesView",
+          "name": "Indexed Open Files"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "file-explorer.show",
+        "title": "Show File Explorer"
+      },
+      {
+        "command": "file-explorer.openByIndex",
+        "title": "Open File By Index"
+      },
+      {
+        "command": "file-explorer.openFile1",
+        "title": "Open File 1"
+      },
+      {
+        "command": "file-explorer.openFile2",
+        "title": "Open File 2"
+      },
+      {
+        "command": "file-explorer.openFile3",
+        "title": "Open File 3"
+      },
+      {
+        "command": "file-explorer.openFile4",
+        "title": "Open File 4"
+      },
+      {
+        "command": "file-explorer.openFile5",
+        "title": "Open File 5"
+      },
+      {
+        "command": "file-explorer.openFile6",
+        "title": "Open File 6"
+      },
+      {
+        "command": "file-explorer.openFile7",
+        "title": "Open File 7"
+      },
+      {
+        "command": "file-explorer.openFile8",
+        "title": "Open File 8"
+      },
+      {
+        "command": "file-explorer.openFile9",
+        "title": "Open File 9"
+      }
+    ],
+    "keybindings": [
+  {
+    "command": "file-explorer.openFile1",
+    "key": "ctrl+shift+1"
+  },
+  {
+    "command": "file-explorer.openFile2",
+    "key": "ctrl+shift+2"
+  },
+  {
+    "command": "file-explorer.openFile3",
+    "key": "ctrl+shift+3"
+  },
+  {
+    "command": "file-explorer.openFile4",
+    "key": "ctrl+shift+4"
+  },
+  {
+    "command": "file-explorer.openFile5",
+    "key": "ctrl+shift+5"
+  },
+  {
+    "command": "file-explorer.openFile6",
+    "key": "ctrl+shift+6"
+  },
+  {
+    "command": "file-explorer.openFile7",
+    "key": "ctrl+shift+7"
+  },
+  {
+    "command": "file-explorer.openFile8",
+    "key": "ctrl+shift+8"
+  },
+  {
+    "command": "file-explorer.openFile9",
+    "key": "ctrl+shift+9"
+  },
+  {
+    "command": "file-explorer.openByIndex",
+    "key": "ctrl+shift+o"
+  }
+]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.125.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.56.1",
+    "eslint": "^9.39.3",
+    "typescript": "^5.9.3",
+    "ts-loader": "^9.5.4",
+    "webpack": "^5.105.3",
+    "webpack-cli": "^6.0.1",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
